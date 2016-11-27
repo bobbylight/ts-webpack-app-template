@@ -8,7 +8,7 @@ describe('Ghost', () => {
 		}
 	}
 
-	it('should allow oncrete subclasses', () => {
+	it('should allow concrete subclasses', () => {
 		const ghost: Ghost = new GhostImpl();
 		expect(ghost.getValue()).toEqual(0);
 	});
