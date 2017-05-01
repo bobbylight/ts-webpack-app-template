@@ -18,7 +18,7 @@ loaders.push({
 
 module.exports = [{
     entry: {
-        main: [ path.resolve('./src/modules/index.ts') ]
+        main: [ path.resolve('./src/app/index.ts') ]
     },
     output: {
         path: path.resolve('dist'),
@@ -26,7 +26,7 @@ module.exports = [{
     },
     resolve: {
         extensions: [ '.ts', '.tsx', '.js', '.json' ],
-        modules: [ 'src/modules', 'src/styles', 'node_modules' ]
+        modules: [ 'src/app', 'src/styles', 'node_modules' ]
     },
     devtool: 'source-map', //devBuild ? 'cheap-eval-source-map' : 'source-map',
     plugins: [

@@ -13,7 +13,7 @@ loaders.push({
 
 module.exports = {
     entry: {
-        main: [ path.resolve('./src/modules/index.ts') ]
+        main: [ path.resolve('./src/app/index.ts') ]
     },
     output: {
         filename: 'build.js',
@@ -21,7 +21,7 @@ module.exports = {
     },
     resolve: {
         extensions: [ '.ts', '.tsx', '.js', '.json' ],
-        modules: [ 'src/modules', 'src/styles', 'node_modules' ]
+        modules: [ 'src/app', 'src/styles', 'node_modules' ]
     },
     devtool: "inline-source-map",
     plugins: [

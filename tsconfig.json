@@ -1,26 +1,20 @@
 {
-	"compilerOptions": {
+    "compilerOptions": {
+        "allowJs": false,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "declaration": false,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        //"noUnusedLocals": true,
+        //"noUnusedParameters": true,
+        "preserveConstEnums": true,
+        "removeComments": false,
+        "strictNullChecks": true,
 
-		"allowJs": false,
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"declaration": false,
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		//"noUnusedLocals": true,
-		//"noUnusedParameters": true,
-		"preserveConstEnums": true,
-		"removeComments": false,
-
-		"target": "es5",
-		"module": "commonjs",
-
-		"outDir": "src/js/",
-		"sourceMap": true
-	},
-	"include": [
-		"src/modules/**/*.ts",
-		"typings/index.d.ts"
-	]
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true
+    }
 }
