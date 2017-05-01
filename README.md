@@ -6,28 +6,25 @@ A template for webpack applications written in TypeScript, based off of the exce
 ## Install
 
 ```sh
-npm install webpack typings typescript -g
 git clone git@github.com/github.com/bobbylight/ts-webpack-app-template.git
 cd ts-webpack-app-template
 npm install
-npm run watch
+npm run dev
 ```
 
-Then it will automatically open the app in your browser.
+The application will be hosted at [http://localhost:8080]().
 
-To run tests
-
+To run tests (temporarily disabled while I figure out how to get coverage working for TypeScript files):
 ```sh
 npm test
 ```
 
-Coverage
-
+Running the tests generates a coverage report:
 ```sh
 open reports/coverage/index.html
 ```
 
-Build
+To do a production (minified) build into `dist/`:
 ```sh
 npm install
 npm run build
@@ -36,9 +33,9 @@ npm run build
 ## Features
 
 - [x] Build application with webpack - build and dev configurations
-- [x] fully tested with Karma/Jasmine
-- [x] Coverage report
-- [x] Running tests in PhantomJS
+- [ ] fully tested with Karma/Jasmine
+- [ ] Coverage report
+- [ ] Running tests in PhantomJS
 - [x] TypeScript support
 - [x] less support
 - [x] Optimized build package

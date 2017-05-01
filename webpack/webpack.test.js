@@ -1,39 +1,33 @@
-var loaders = require('./loaders');
-var webpack = require('webpack');
+const loaders = require('./loaders');
+const path = require('path');
+const webpack = require('webpack');
+
+loaders.push({
+    test: /\.ts$/,
+    loader: 'istanbul-instrumenter-loader',
+    exclude: [
+        /node_modules/,
+        /\.spec\.ts$/
+    ]
+});
 
 module.exports = {
-  entry: ['./src/index.ts'],
-  output: {
-    filename: 'build.js',
-    path: 'tmp'
-  },
-  resolve: {
-    root: __dirname,
-    extensions: ['', '.ts', '.js', '.json']
-  },
-  resolveLoader: {
-    modulesDirectories: ["node_modules"]
-  },
-  devtool: "source-map-inline",
-  plugins: [
-    new webpack.ProvidePlugin({
-    })
-  ],
-  module: {
-    preLoaders: [
-      {
-        test: /\.ts$/,
-        loader: 'tslint-loader'
-      }
+    entry: {
+        main: [ path.resolve('./src/modules/index.ts') ]
+    },
+    output: {
+        filename: 'build.js',
+        path: 'tmp'
+    },
+    resolve: {
+        extensions: [ '.ts', '.tsx', '.js', '.json' ],
+        modules: [ 'src/modules', 'src/styles', 'node_modules' ]
+    },
+    devtool: "inline-source-map",
+    plugins: [
+        new webpack.ProvidePlugin({})
     ],
-    loaders: loaders,
-    postLoaders: [
-      {
-        test: /^((?!\.spec\.ts).)*.ts$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'istanbul-instrumenter'
-      }
-    ]
-  }
+    module: {
+        loaders: loaders
+    }
 };
-

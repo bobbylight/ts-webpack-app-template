@@ -1,4 +1,4 @@
 export abstract class Ghost {
 
-	abstract getValue(): number;
+    abstract getValue(): number;
 }

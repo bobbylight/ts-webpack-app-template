@@ -14,7 +14,7 @@
 		"forin": false,
 		"indent": [
 			true,
-			"tabs"
+			"spaces"
 		],
 		"jsdoc-format": true,
 		"label-position": true,
@@ -40,17 +40,18 @@
 		//"no-for-in-array": true,
 		"no-inferrable-types": false,
 		"no-internal-module": false,
+		"no-invalid-template-strings": true,
 		"no-mergeable-namespace": true,
 		"no-null-keyword": false,
 		"no-parameter-properties": true,
 		"no-require-imports": false,
 		"no-shadowed-variable": false,
+		"no-sparse-arrays": true,
 		"no-string-literal": true,
 		"no-switch-case-fall-through": false,
 		"no-trailing-whitespace": true,
 		"no-unsafe-finally": true,
 		"no-unused-expression": true,
-		"no-unused-new": true,
 		//"no-unused-variable": [true],
 		"no-use-before-declare": true,
 		"no-var-keyword": true,
@@ -96,7 +97,6 @@
 		"variable-name": [
 			true,
 			"check-format",
-			"allow-leading-underscore",
 			"ban-keywords"
 		],
 		"whitespace": [
