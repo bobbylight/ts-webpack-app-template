@@ -1,8 +1,8 @@
 module.exports = [
     {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        loader: 'ts-loader'
     }, {
         test: /\.css$/,
         loader: 'style-loader!css-loader'

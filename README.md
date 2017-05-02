@@ -14,9 +14,10 @@ npm run dev
 
 The application will be hosted at [http://localhost:8080]().
 
-To run tests (temporarily disabled while I figure out how to get coverage working for TypeScript files):
+To run tests:
 ```sh
-npm test
+npm run test     # Tests only
+npm run coverage # Generates coverage report
 ```
 
 Running the tests generates a coverage report:
@@ -33,9 +34,9 @@ npm run build
 ## Features
 
 - [x] Build application with webpack - build and dev configurations
-- [ ] fully tested with Karma/Jasmine
-- [ ] Coverage report
-- [ ] Running tests in PhantomJS
+- [x] fully tested with Karma/Jasmine
+- [x] Coverage report
+- [x] Running tests in PhantomJS
 - [x] TypeScript support
 - [x] less support
 - [x] Optimized build package
